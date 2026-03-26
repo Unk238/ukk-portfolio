@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Professional portfolio of Umme Kulsum Khanum, aspiring front-end developer."
+    />
+    <title>UMME KULSUM KHANUM | Front-End Portfolio</title>
+
+    <!-- Google Font: clean and modern typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Decorative animated glow shapes in the background -->
+    <div class="bg-orb orb-1" aria-hidden="true"></div>
+    <div class="bg-orb orb-2" aria-hidden="true"></div>
+    <div class="bg-orb orb-3" aria-hidden="true"></div>
+
+    <!-- Scroll progress bar -->
+    <div id="scroll-progress" class="scroll-progress" aria-hidden="true"></div>
+
+    <!-- Custom animated cursor -->
+    <div class="custom-cursor" id="cursorOuter"></div>
+    <div class="custom-cursor-dot" id="cursorInner"></div>
+
+    <!-- Sticky top navigation -->
+    <header class="header" id="top">
+      <nav class="navbar container" aria-label="Primary navigation">
+        <a href="#top" class="brand">UKK</a>
+        <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul class="nav-links">
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Hero section with profile and key actions -->
+      <section id="hero" class="hero container">
+        <div class="hero-content">
+          <p class="eyebrow">Hello, I am</p>
+          <h1><span>UMME KULSUM KHANUM</span></h1>
+          <h2>Aspiring Front-End Developer</h2>
+          <p class="intro">
+            I am a motivated BCA student focused on building strong front-end
+            fundamentals through practical projects, responsive design, and
+            continuous learning. I enjoy creating clean, user-friendly web
+            interfaces that are both functional and visually modern.
+          </p>
+
+          <div class="cta-group">
+            <a class="btn btn-primary" href="resume_1ukk.pdf" download>Download Resume</a>
+            <a class="btn" href="https://www.linkedin.com/in/umme-kulsum-k-a085a9364" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a class="btn" href="https://github.com/Unk238" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a class="btn" href="https://wa.me/918197516240" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+            <a class="btn" href="tel:+918197516240">Call</a>
+            <button id="loginOpenBtn" class="btn btn-primary" type="button">Login</button>
+          </div>
+        </div>
+
+        <div class="hero-image-wrap">
+          <img
+            src="photo68.jpeg"
+            alt="Portrait of Umme Kulsum Khanum"
+            class="hero-image"
+
+          />
+        </div>
+      </section>
+
+      <!-- About + Education section -->
+      <section id="about" class="section container reveal">
+        <div class="section-heading">
+          <p class="eyebrow">Get to know me</p>
+          <h2>About Me</h2>
+        </div>
+        <div class="about-grid">
+          <article class="card about-text">
+            <p>
+              I am currently pursuing a Bachelor of Computer Applications (BCA)
+              and actively building a strong foundation in front-end development.
+              My focus is on writing structured, maintainable code and improving
+              each day through hands-on practice.
+            </p>
+            <p>
+              I value consistency, curiosity, and user-centered thinking. As I
+              grow, I aim to contribute to real-world projects where I can blend
+              creativity with technical skills to deliver meaningful web
+              experiences.
+            </p>
+          </article>
+
+          <div class="education-timeline">
+            <article class="card timeline-item">
+              <h3>Bachelor of Computer Applications (Computer Science)</h3>
+              <p class="institute">Kristu Jayanti University</p>
+              <p>May 2025 – Aug 2028</p>
+              <p>Current CGPA: <strong>7.5 (1st Semester)</strong></p>
+            </article>
+            <article class="card timeline-item">
+              <h3>2nd PUC (PCMB)</h3>
+              <p class="institute">Mount Carmel PU College</p>
+              <p>2023 – 2025</p>
+              <p><strong>66.67%</strong></p>
+            </article>
+            <article class="card timeline-item">
+              <h3>High School</h3>
+              <p class="institute">Presidency School</p>
+              <p>2013 – 2023</p>
+              <p><strong>78.67%</strong></p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Skills section with animated progress bars -->
+      <section id="skills" class="section container reveal">
+        <div class="section-heading">
+          <p class="eyebrow">Core strengths</p>
+          <h2>Skills</h2>
+        </div>
+        <div class="skills-grid">
+          <article class="card skill-card" data-level="90">
+            <div class="skill-header"><h3>HTML</h3><span>90%</span></div>
+            <div class="skill-track"><div class="skill-bar"></div></div>
+          </article>
+          <article class="card skill-card" data-level="88">
+            <div class="skill-header"><h3>CSS</h3><span>88%</span></div>
+            <div class="skill-track"><div class="skill-bar"></div></div>
+          </article>
+          <article class="card skill-card" data-level="78">
+            <div class="skill-header"><h3>JavaScript</h3><span>78%</span></div>
+            <div class="skill-track"><div class="skill-bar"></div></div>
+          </article>
+          <article class="card skill-card" data-level="80">
+            <div class="skill-header"><h3>Git &amp; GitHub</h3><span>80%</span></div>
+            <div class="skill-track"><div class="skill-bar"></div></div>
+          </article>
+          <article class="card skill-card" data-level="62">
+            <div class="skill-header"><h3>Node.js (Basic)</h3><span>62%</span></div>
+            <div class="skill-track"><div class="skill-bar"></div></div>
+          </article>
+          <article class="card skill-card" data-level="86">
+            <div class="skill-header"><h3>Responsive Design</h3><span>86%</span></div>
+            <div class="skill-track"><div class="skill-bar"></div></div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Projects section -->
+      <section id="projects" class="section container reveal">
+        <div class="section-heading">
+          <p class="eyebrow">What I built</p>
+          <h2>Projects</h2>
+        </div>
+
+        <div class="projects-grid">
+          <article class="card project-card" data-tech="HTML CSS JavaScript">
+            <div class="project-overlay"></div>
+            <h3>Personal Portfolio Website</h3>
+            <p>A responsive dark-themed animated portfolio with modern UI interactions.</p>
+            <p class="project-tech"><strong>Tech:</strong> HTML, CSS, JavaScript</p>
+            <div class="project-actions">
+              <a class="btn btn-outline" href="#" target="_blank" rel="noopener noreferrer">View Project</a>
+              <a class="btn btn-outline" href="https://github.com/Unk238" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+          </article>
+          <article class="card project-card" data-tech="HTML CSS JavaScript">
+            <div class="project-overlay"></div>
+            <h3>Basic Frontend Practice Project</h3>
+            <p>Multiple mini projects focused on layout, responsive design and DOM handling.</p>
+            <p class="project-tech"><strong>Tech:</strong> HTML, CSS, JavaScript</p>
+            <div class="project-actions">
+              <a class="btn btn-outline" href="#" target="_blank" rel="noopener noreferrer">View Project</a>
+              <a class="btn btn-outline" href="https://github.com/Unk238" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+          </article>
+          <article class="card project-card" data-tech="HTML CSS JavaScript">
+            <div class="project-overlay"></div>
+            <h3>Interactive Calculator</h3>
+            <p>A custom calculator app that performs basic operations and keyboard support.</p>
+            <p class="project-tech"><strong>Tech:</strong> HTML, CSS, JavaScript</p>
+            <div class="project-actions">
+              <a class="btn btn-outline" href="#" target="_blank" rel="noopener noreferrer">View Project</a>
+              <a class="btn btn-outline" href="#" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+          </article>
+          <article class="card project-card" data-tech="HTML CSS JavaScript">
+            <div class="project-overlay"></div>
+            <h3>To-do List App</h3>
+            <p>Task management interface with add/edit/delete and local storage persistence.</p>
+            <p class="project-tech"><strong>Tech:</strong> HTML, CSS, JavaScript</p>
+            <div class="project-actions">
+              <a class="btn btn-outline" href="#" target="_blank" rel="noopener noreferrer">View Project</a>
+              <a class="btn btn-outline" href="#" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+          </article>
+          <article class="card project-card" data-tech="HTML CSS JavaScript">
+            <div class="project-overlay"></div>
+            <h3>Poll App</h3>
+            <p>Simple interactive poll app with real-time results and visual bars.</p>
+            <p class="project-tech"><strong>Tech:</strong> HTML, CSS, JavaScript</p>
+            <div class="project-actions">
+              <a class="btn btn-outline" href="#" target="_blank" rel="noopener noreferrer">View Project</a>
+              <a class="btn btn-outline" href="#" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Contact section -->
+      <section id="contact" class="section container reveal">
+        <div class="section-heading">
+          <p class="eyebrow">Let's connect</p>
+          <h2>Contact</h2>
+        </div>
+
+        <div class="card contact-card">
+          <form id="contactForm" class="contact-form" novalidate>
+            <label for="contactName">Name</label>
+            <input id="contactName" type="text" placeholder="Your name" required />
+
+            <label for="contactEmail">Email</label>
+            <input id="contactEmail" type="email" placeholder="your.email@example.com" required />
+
+            <label for="contactMessage">Message</label>
+            <textarea id="contactMessage" rows="5" placeholder="Tell me about your project..." required></textarea>
+
+            <button type="submit" class="btn btn-primary">Send Message</button>
+            <p id="contactFeedback" class="form-feedback"></p>
+          </form>
+
+        </div>
+      </section>
+    </main>
+
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal" aria-hidden="true">
+      <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="loginHeading">
+        <button id="loginCloseBtn" class="modal-close" aria-label="Close login modal">×</button>
+        <h2 id="loginHeading">Member Login</h2>
+        <form id="loginForm" class="login-form" novalidate>
+          <label for="loginUser">Username</label>
+          <input id="loginUser" type="text" placeholder="username" required />
+          <label for="loginPassword">Password</label>
+          <input id="loginPassword" type="password" placeholder="password" required />
+          <button type="submit" class="btn btn-primary">Login</button>
+          <p id="loginFeedback" class="form-feedback"></p>
+        </form>
+      </div>
+    </div>
+
+    <!-- Chatbot widget -->
+    <div class="chatbot-widget" aria-live="polite">
+      <button id="chatToggle" class="chat-toggle" aria-label="Open chat widget">💬</button>
+      <div id="chatBox" class="chat-box" aria-hidden="true">
+        <div class="chat-header">Chat Helper<i id="chatClose" class="chat-close" aria-label="Close chat">✕</i></div>
+        <div id="chatMessages" class="chat-messages"></div>
+        <form id="chatForm" class="chat-form">
+          <input id="chatInput" type="text" placeholder="Type your message..." autocomplete="off" required />
+          <button type="submit">Send</button>
+        </form>
+      </div>
+    </div>
+
+    <footer class="footer container">
+      <p>© <span id="year"></span> UMME KULSUM KHANUM. Built with passion and consistency.</p>
+      <p>style="font-size:0.9rem; color:#a6b3cf; margin-top:0.35rem;">Enhanced with AI assistance by GitHub Copilot.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
