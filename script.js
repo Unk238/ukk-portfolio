@@ -205,17 +205,23 @@ const contactFeedback = document.getElementById('contactFeedback');
 contactForm.addEventListener('submit', async (event) => {
   event.preventDefault();
 
+  const submitBtn = contactForm.querySelector('button[type="submit"]');
   const name = document.getElementById('contactName').value.trim();
   const email = document.getElementById('contactEmail').value.trim();
   const message = document.getElementById('contactMessage').value.trim();
 
   if (!name || !email || !message) {
     contactFeedback.textContent = 'Please complete all fields.';
+    contactFeedback.classList.remove('success');
+    contactFeedback.classList.add('error');
     return;
   }
 
+  submitBtn.disabled = true;
+  submitBtn.textContent = 'Sending...';
+
   try {
-    const res = await fetch("http://localhost:5000/contact", {
+    const res = await fetch("/.netlify/functions/contact", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -225,11 +231,30 @@ contactForm.addEventListener('submit', async (event) => {
 
     const data = await res.json();
 
-    contactFeedback.textContent = data.message;
-    contactForm.reset();
+    if (res.ok) {
+      submitBtn.textContent = 'Your message was sent successfully!';
+      submitBtn.classList.add('btn-success');
+      contactFeedback.textContent = '';
+      contactForm.reset();
 
+      setTimeout(() => {
+        submitBtn.textContent = 'Send Message';
+        submitBtn.classList.remove('btn-success');
+        submitBtn.disabled = false;
+      }, 3000);
+    } else {
+      contactFeedback.textContent = data.message;
+      contactFeedback.classList.remove('success');
+      contactFeedback.classList.add('error');
+      submitBtn.textContent = 'Send Message';
+      submitBtn.disabled = false;
+    }
   } catch (err) {
-    contactFeedback.textContent = "Error sending message";
+    contactFeedback.textContent = "Error sending message. Please try again.";
+    contactFeedback.classList.remove('success');
+    contactFeedback.classList.add('error');
+    submitBtn.textContent = 'Send Message';
+    submitBtn.disabled = false;
   }
 });
 
