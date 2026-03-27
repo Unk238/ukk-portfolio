@@ -286,5 +286,29 @@
     </footer>
 
     <script src="script.js"></script>
+    <input id="input" placeholder="Ask something..." />
+<button onclick="sendMessage()">Send</button>
+
+<p id="output"></p>
+
+<script>
+async function sendMessage() {
+  const input = document.getElementById("input").value;
+
+  const res = await fetch("https://ukk-backend-1.onrender.com", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({ message: input }),
+  });
+
+  const data = await res.json();
+  console.log(data);
+
+  document.getElementById("output").innerText =
+    data.candidates?.[0]?.content?.parts?.[0]?.text || "No response";
+}
+</script>
   </body>
 </html>
