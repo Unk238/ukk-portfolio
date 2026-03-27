@@ -281,4 +281,22 @@ interactiveElems.forEach((elem) => {
     cursorOuter.style.transform = 'translate(-50%, -50%) scale(1)';
     cursorInner.style.transform = 'translate(-50%, -50%) scale(1)';
   });
+  async function sendMessage() {
+  const input = document.getElementById("input").value;
+
+  const res = await fetch("https://ukk-backend-1.onrender.com", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({ message: input }),
+  });
+
+  const data = await res.json();
+  console.log(data);
+
+  // OPTIONAL: show response
+  document.getElementById("output").innerText =
+    data.candidates?.[0]?.content?.parts?.[0]?.text || "No response";
+}
 });
